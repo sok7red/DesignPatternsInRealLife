@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>NUnitTests</RootNamespace>
+
+    <IsPackable>false</IsPackable>
+
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Ardalis.GuardClauses" Version="4.0.0" />
+    <PackageReference Include="morelinq" Version="3.3.2" />
+    <PackageReference Include="NUnit" Version="3.13.2" />
+    <PackageReference Include="NUnit3TestAdapter" Version="4.2.1" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.1.0" />
+    <PackageReference Include="SpecRun.Runner" Version="3.9.31" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Adaptation_Builder_Immutable\Adaptation_Builder_Immutable\Adaptation_Builder_Immutable.csproj" />
+  </ItemGroup>
+
+</Project>

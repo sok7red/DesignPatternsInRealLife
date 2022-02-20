@@ -1,0 +1,16 @@
+
+Adaptation_Builder_Immutable/Adaptation_Builder_Immutable/obj/
+Adaptation_Builder_Immutable/Adaptation_Builder_Immutable/bin/
+Adaptation_Builder_Immutable/.vs/Adaptation_Builder_Immutable/v16/
+
+NUnitTests/bin/
+
+NUnitTests/obj/
+
+SpecflowTests/bin/
+
+SpecflowTests/obj/
+
+*.v2
+
+*.user
