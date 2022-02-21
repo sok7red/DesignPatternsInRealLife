@@ -1,6 +1,6 @@
 ﻿namespace Adaptation_Builder_Immutable.Interfaces
 {
-    public interface IEconomicEntityObjectAdaptor
+    public interface IEconomicEntityAdaptor
     {
         IEconomicEntity AdaptFrom(IBasicEntityObject deal);
     }

@@ -4,9 +4,9 @@ using Ardalis.GuardClauses;
 
 namespace Adaptation_Builder_Immutable.Domain
 {
-    public class EconomicEntityObject : IEconomicEntity
+    public class EconomicEntity : IEconomicEntity
     {
-        public EconomicEntityObject(int counterpartyId, string counterpartyName, string nettingGroupName, double effectiveMaturity, double remainingMaturity,
+        public EconomicEntity(int counterpartyId, string counterpartyName, string nettingGroupName, double effectiveMaturity, double remainingMaturity,
             decimal exposureAtDefault, CreditQualityInformation creditRatings, bool isEligible, RiskWeight riskWeight)
         {
             Guard.Against.NegativeOrZero(counterpartyId, nameof(counterpartyId));

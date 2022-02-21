@@ -54,7 +54,7 @@ namespace SpecflowTests.Steps
         [When(@"I create the Economic Entity object")]
         public void AdaptatEE()
         {
-            var adaptor = new EconomicEntityObjectAdaptor(_creditInformationContext.RiskWeight,
+            var adaptor = new SimpleAdaptor(_creditInformationContext.RiskWeight,
                 _creditInformationContext.Ratings, _eligibleCounterpartyContext.GetEligibleCounterpartyInformation());
 
             _nonImmTradesContext.GetNonImaEntities().ForEach(x => _economicEntityContext.AddDeal(adaptor.AdaptFrom(x)));

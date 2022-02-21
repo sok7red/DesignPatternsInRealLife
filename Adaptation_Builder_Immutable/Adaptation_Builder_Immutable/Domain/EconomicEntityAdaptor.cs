@@ -6,13 +6,13 @@ using Adaptation_Builder_Immutable.Interfaces;
 
 namespace Adaptation_Builder_Immutable.Domain
 {
-    public class EconomicEntityObjectAdaptor : IEconomicEntityObjectAdaptor
+    public abstract class EconomicEntityAdaptor : IEconomicEntityAdaptor
     {
         private readonly Dictionary<CreditQualitySteps, double> _riskWeights;
         private readonly Dictionary<CreditRatings, CreditQualitySteps> _creditQuality;
         private readonly IEnumerable<IEligibilityInformation> _eligibilityInformation;
 
-        public EconomicEntityObjectAdaptor(Dictionary<CreditQualitySteps,double> riskWeights, 
+        public EconomicEntityAdaptor(Dictionary<CreditQualitySteps,double> riskWeights, 
             Dictionary<CreditRatings,CreditQualitySteps> creditQuality,
             IEnumerable<IEligibilityInformation> eligibilityInformation)
         {
@@ -23,7 +23,7 @@ namespace Adaptation_Builder_Immutable.Domain
 
         public IEconomicEntity AdaptFrom(IBasicEntityObject objectInstance)
         {
-            var economicEntityBuilder = new EconomicEntityObjectBuilder();
+            var economicEntityBuilder = new EconomicEntityBuilder();
 
             economicEntityBuilder.SetCounterpartyId(objectInstance.CounterpartyId);
             economicEntityBuilder.SetCounterpartyName(objectInstance.CounterpartyName);
